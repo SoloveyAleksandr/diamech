@@ -1,69 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  class Menu {
-    constructor(menuElement, buttonElement) {
-      this.menu = typeof menuElement === "string" ? document.querySelector(menuElement) : menuElement
-      this.button = typeof buttonElement === "string" ? document.querySelector(buttonElement) : buttonElement
-      this.overlay = document.createElement('div')
-      this.overlay.hidden = true
-      this._init()
-    }
-
-    _init() {
-      document.body.appendChild(this.overlay)
-      this.overlay.classList.add('overlay')
-
-      this.overlay.addEventListener('click', this.toggleMenu.bind(this))
-      this.button.addEventListener('click', this.toggleMenu.bind(this))
-    }
-
-    toggleMenu() {
-      this.menu.classList.toggle('menu--open')
-      this.button.classList.toggle('menu-button--active')
-      this.overlay.hidden = !this.overlay.hidden
-
-      if (this.isMenuOpen()) {
-        this.disableScroll()
-      } else {
-        this.enableScroll()
-      }
-    }
-
-    closeMenu() {
-      this.menu.classList.remove('header__nav--active')
-      this.button.classList.remove('header__menu-button--active')
-      this.overlay.hidden = true
-
-      this.enableScroll()
-    }
-
-    isMenuOpen() {
-      return this.menu.classList.contains('menu--open')
-    }
-
-    disableScroll() {
-      // Get the current page scroll position
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-
-      // if any scroll is attempted, set this to the previous value
-      window.onscroll = function () {
-        window.scrollTo(scrollLeft, scrollTop);
-      };
-    }
-
-    enableScroll() {
-      window.onscroll = function () { };
-    }
-  }
-
-  const menu = document.querySelector('.menu')
-  const menuButton = document.querySelector('.menu-button')
-
-  if (menu && menuButton) {
-    new Menu(menu, menuButton)
-  }
-
   class dropDown {
     constructor(listElement, buttonElement) {
       this.list = typeof listElement === "string" ? document.querySelector(listElement) : listElement
@@ -88,48 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
     new dropDown(headerMenu, headerMenuBtn)
   }
 
-  // class hideElements {
-  //   constructor(elementsList, checkboxElement) {
-  //     this.elements = elementsList;
-  //     this.checkbox = typeof checkboxElement === "string" ? document.querySelector(checkboxElement) : checkboxElement
-  //     this._init();
-  //   }
-
-  //   _init() {
-  //     this.button.addEventListener('click', this.toggleState.bind(this))
-  //   }
-
-  //   toggleState() {
-  //     if (this.checkbox.checked) {
-  //       this.show();
-  //     } else {
-  //       this.hide();
-  //     }
-  //   }
-
-  //   hide() {
-  //     this.elements.forEach(element => {
-  //       element.classList.remove("_open");
-  //     });
-  //   }
-
-  //   show() {
-  //     this.elements.forEach(element => {
-  //       element.classList.add("_open");
-  //     });
-  //   }
-  // }
-
-  // const elementsForHide = document.querySelectorAll('.hidden');
-  // const checkbox = document.getElementById('check');
-
-  // if (elementsForHide && checkbox) {
-  //   new hideElements(elementsForHide, checkbox)
-  // }
-
   const container = document.querySelector('.balance');
   const elementsForHide = document.querySelectorAll('.hidden');
-  const checkItem = document.getElementById('check');
+  const checkItem = document.getElementById('KF');
   checkItem.onclick = () => {
     if (checkItem.checked) {
       show();
@@ -146,84 +43,124 @@ document.addEventListener("DOMContentLoaded", () => {
     container.classList.add("_open");
   }
 
-  let x, i, j, l, ll, selElmnt, a, b, c;
-  /* Look for any elements with the class "custom-select": */
-  x = document.getElementsByClassName("custom-select");
-  l = x.length;
-  for (i = 0; i < l; i++) {
-    selElmnt = x[i].getElementsByTagName("select")[0];
-    ll = selElmnt.length;
-    /* For each element, create a new DIV that will act as the selected item: */
-    a = document.createElement("DIV");
-    a.setAttribute("class", "select-selected");
-    a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-    x[i].appendChild(a);
-    /* For each element, create a new DIV that will contain the option list: */
-    b = document.createElement("DIV");
-    b.setAttribute("class", "select-items select-hide");
-    for (j = 1; j < ll; j++) {
-      /* For each option in the original select element,
-      create a new DIV that will act as an option item: */
-      c = document.createElement("DIV");
-      c.innerHTML = selElmnt.options[j].innerHTML;
-      c.addEventListener("click", function (e) {
-        /* When an item is clicked, update the original select box,
-        and the selected item: */
-        let y, i, k, s, h, sl, yl;
-        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-        sl = s.length;
-        h = this.parentNode.previousSibling;
-        for (i = 0; i < sl; i++) {
-          if (s.options[i].innerHTML == this.innerHTML) {
-            s.selectedIndex = i;
-            h.innerHTML = this.innerHTML;
-            y = this.parentNode.getElementsByClassName("same-as-selected");
-            yl = y.length;
-            for (k = 0; k < yl; k++) {
-              y[k].removeAttribute("class");
-            }
-            this.setAttribute("class", "same-as-selected");
-            break;
-          }
+  class Select {
+    constructor(selectContainer) {
+      this.selectContainer = selectContainer;
+      this.button = this.selectContainer.querySelector('.custom-select__btn');
+      this.buttonText = this.button.querySelector('.custom-select__btn-text');
+      this.select = this.selectContainer.querySelector('.custom-select__select');
+      this.options = this.select.querySelectorAll('.custom-select__option');
+      this.selectList = this.selectContainer.querySelector('.custom-select-list');
+      this.listItemTemplate = this.selectList.querySelector('template')
+        .content.cloneNode(true).querySelector('.custom-select-list__item');
+      this.init();
+    }
+
+    init() {
+      const listFragment = new DocumentFragment();
+      this.options.forEach((item, index) => {
+        const listItem = this.listItemTemplate.cloneNode(true);
+        if (item.selected) {
+          listItem.classList.add('_default');
+          this.buttonText.innerHTML = item.innerHTML
         }
-        h.click();
+        listItem.dataset.value = item.value;
+        listItem.innerHTML = item.innerHTML;
+        listItem.onclick = (e) => this.setValue(e, listItem);
+        listFragment.appendChild(listItem);
       });
-      b.appendChild(c);
+      this.selectList.innerHTML = '';
+      this.selectList.append(listFragment);
+      this.button.onclick = (e) => this.setOpen(e);
     }
-    x[i].appendChild(b);
-    a.addEventListener("click", function (e) {
-      /* When the select box is clicked, close any other select boxes,
-      and open/close the current select box: */
+
+    setOpen(e) {
+      this.selectList.classList.toggle('_open');
+      this.button.classList.toggle('_open');
       e.stopPropagation();
-      closeAllSelect(this);
-      this.nextSibling.classList.toggle("select-hide");
-      this.classList.toggle("select-arrow-active");
-    });
+    }
+
+    close() {
+      this.selectList.classList.remove('_open');
+      this.button.classList.remove('_open');
+    }
+
+    setValue(e, item) {
+      this.select.onchange && this.select.onchange();
+      this.select.value = item.dataset.value;
+      this.buttonText.innerHTML = item.innerHTML;
+      this.button.classList.add('_selected');
+      this.removeSelectedClass();
+      this.addActiveClass.call(item);
+      this.setOpen(e);
+      e.stopPropagation();
+    }
+
+    setDefaultValue() {
+      this.select.value = this.select.children[0].value;
+      this.buttonText.innerHTML = this.select.children[0].innerHTML;
+    }
+
+    removeSelectedClass() {
+      const selectItems = this.selectList.querySelectorAll('.custom-select-list__item');
+      selectItems.forEach((item) => item.classList.remove('_selected'));
+    }
+
+    addActiveClass() {
+      this.classList.add('_selected');
+    }
+
+    hide() {
+      this.selectContainer.classList.add('_hidden');
+    }
+
+    show() {
+      this.selectContainer.classList.remove('_hidden');
+    }
   }
 
-  function closeAllSelect(elmnt) {
-    /* A function that will close all select boxes in the document,
-    except the current select box: */
-    let x, y, i, xl, yl, arrNo = [];
-    x = document.getElementsByClassName("select-items");
-    y = document.getElementsByClassName("select-selected");
-    xl = x.length;
-    yl = y.length;
-    for (i = 0; i < yl; i++) {
-      if (elmnt == y[i]) {
-        arrNo.push(i)
-      } else {
-        y[i].classList.remove("select-arrow-active");
-      }
-    }
-    for (i = 0; i < xl; i++) {
-      if (arrNo.indexOf(i)) {
-        x[i].classList.add("select-hide");
-      }
+  const selectContainer_1 = document.querySelector('#custom-select_1');
+  const TVGSelectContainer = selectContainer_1 ? new Select(selectContainer_1) : null;
+
+  const selectContainer_2 = document.querySelector('#custom-select_2');
+  const TVVSelectContainer = selectContainer_2 ? new Select(selectContainer_2) : null;
+
+  const selectContainer_3 = document.querySelector('#custom-select_3');
+  const regimSelectContainer = selectContainer_3 ? new Select(selectContainer_3) : null;
+
+  const TGVRadio = document.querySelector('#TGV-radio');
+  const TVVRadio = document.querySelector('#TVV-radio');
+  TGVRadio.onchange = changeSelectedList;
+  TVVRadio.onchange = changeSelectedList;
+
+  function changeSelectedList() {
+    if (TGVRadio.checked) {
+      TVGSelectContainer.show();
+      TVVSelectContainer.hide();
+      TVVSelectContainer.close();
+      TVVSelectContainer.setDefaultValue();
+    } else if (TVVRadio.checked) {
+      TVVSelectContainer.show();
+      TVGSelectContainer.hide();
+      TVGSelectContainer.close();
+      TVGSelectContainer.setDefaultValue();
     }
   }
+  changeSelectedList();
 
-  /* If the user clicks anywhere outside the select box,
-  then close all select boxes: */
-  document.addEventListener("click", closeAllSelect);
+  document.onclick = (e) => {
+    TVGSelectContainer.close();
+    TVVSelectContainer.close();
+    regimSelectContainer.close();
+  }
+
+  const form = document.querySelector('.balance-form');
+  // form.onsubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(new FormData(form));
+  // }
+
+  DRAW();
 })
+
+//////

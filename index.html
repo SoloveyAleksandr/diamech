@@ -102,29 +102,22 @@
                 d="M22.54 4.9267L12.8333 14.5934C12.5835 14.8417 12.2455 14.9811 11.8933 14.9811C11.541 14.9811 11.2031 14.8417 10.9533 14.5934L1.33329 5.00003C1.30371 5.10872 1.28803 5.22073 1.28662 5.33336V18.6667C1.28662 19.0203 1.4271 19.3595 1.67715 19.6095C1.92719 19.8596 2.26633 20 2.61995 20H21.2866C21.6402 20 21.9794 19.8596 22.2294 19.6095C22.4795 19.3595 22.62 19.0203 22.62 18.6667V5.33336C22.6146 5.19447 22.5877 5.05725 22.54 4.9267ZM3.53329 18.6667H2.60662V17.7134L7.45329 12.9067L8.39329 13.8467L3.53329 18.6667ZM21.2733 18.6667H20.34L15.48 13.8467L16.42 12.9067L21.2666 17.7134L21.2733 18.6667Z" />
         </symbol>
     
-        <svg id="user-icon" viewBox="0 0 16 16" fill="none">
-            <g clip-path="url(#clip0_89_486)">
-                <circle cx="8" cy="4" r="3" stroke="#3F3F40" stroke-width="2" />
-                <mask id="path-2-inside-1_89_486" fill="white">
-                    <path
-                        d="M16 15.6C16 14.3918 15.7931 13.1955 15.391 12.0793C14.989 10.9631 14.3997 9.94891 13.6569 9.09461C12.914 8.24031 12.0321 7.56265 11.0615 7.1003C10.0909 6.63796 9.05057 6.39999 8 6.39999C6.94942 6.39999 5.90914 6.63796 4.93853 7.1003C3.96793 7.56265 3.08601 8.24031 2.34315 9.09461C1.60028 9.94891 1.011 10.9631 0.608964 12.0793C0.206926 13.1955 -9.18442e-08 14.3918 0 15.6L8 15.6H16Z" />
-                </mask>
-                <path
-                    d="M16 15.6C16 14.3918 15.7931 13.1955 15.391 12.0793C14.989 10.9631 14.3997 9.94891 13.6569 9.09461C12.914 8.24031 12.0321 7.56265 11.0615 7.1003C10.0909 6.63796 9.05057 6.39999 8 6.39999C6.94942 6.39999 5.90914 6.63796 4.93853 7.1003C3.96793 7.56265 3.08601 8.24031 2.34315 9.09461C1.60028 9.94891 1.011 10.9631 0.608964 12.0793C0.206926 13.1955 -9.18442e-08 14.3918 0 15.6L8 15.6H16Z"
-                    stroke="#3F3F40" stroke-width="4" mask="url(#path-2-inside-1_89_486)" />
-            </g>
-            <defs>
-                <clipPath id="clip0_89_486">
-                    <rect width="16" height="16" fill="white" />
-                </clipPath>
-            </defs>
-        </svg>
+        <symbol id="user-icon" enable-background="new 0 0 32 32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="m20.09 15.669c1.759-1.273 2.91-3.337 2.91-5.669 0-3.859-3.14-7-7-7s-7 3.141-7 7c0 2.332 1.151 4.396 2.91 5.669-5.168 1.719-8.91 6.593-8.91 12.331 0 .553.448 1 1 1h24c.552 0 1-.447 1-1 0-5.738-3.742-10.612-8.91-12.331zm-9.09-5.669c0-2.757 2.243-5 5-5s5 2.243 5 5-2.243 5-5 5-5-2.243-5-5zm-5.955 17c.507-5.599 5.226-10 10.955-10s10.448 4.401 10.955 10z">
+            </path>
+        </symbol>
     
+        <!-- <symbol id="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M18.6775 9.26768C18.4804 9.09628 18.213 9 17.9342 9C17.6554 9 17.388 9.09628 17.1908 9.26768L11.9864 13.7932L6.782 9.26768C6.5837 9.10114 6.31812 9.00899 6.04245 9.01107C5.76677 9.01316 5.50307 9.10931 5.30813 9.27882C5.11319 9.44832 5.00262 9.67763 5.00022 9.91734C4.99783 10.1571 5.1038 10.388 5.29532 10.5604L11.2431 15.7323C11.4402 15.9037 11.7076 16 11.9864 16C12.2652 16 12.5326 15.9037 12.7298 15.7323L18.6775 10.5604C18.8746 10.389 18.9854 10.1565 18.9854 9.91405C18.9854 9.67163 18.8746 9.43913 18.6775 9.26768V9.26768Z"
+                fill="#9E9EA0" />
+        </symbol> -->
     
     
     </svg>
     <div class="page">
-        
+
         <!-- Header -->
 
         <header class="header">
@@ -143,11 +136,15 @@
               <div class="header-nav">
                 <button class="header-nav__btn header-nav-btn">
                   <span class="header-list__icon">
-                    <img src="./assets/images/user-icon.svg" alt="user" class="header-list__icon-img">
+                    <svg class="header-list__icon-img">
+                      <use href="#user-icon"></use>
+                    </svg>
                   </span>
                   <span class="header-nav-btn__name">Вячеслав</span>
                   <span class="header-nav-btn-img">
-                    <img class="header-nav-btn__img" src="./assets/images/arrow-icon.svg" alt="arrow-icon">
+                    <svg>
+                      <use href="#arrow-icon"></use>
+                    </svg>
                   </span>
                 </button>
                 <ul class="header-nav__list">
@@ -167,9 +164,11 @@
               <ul class="header-list">
                 <li class="header-list__item">
                   <a href="#" class="header-list__link">
-                    <div class="header-list__icon">
-                      <img src="./assets/images/user-icon.svg" alt="user" class="header-list__icon-img">
-                    </div>
+                    <span class="header-list__icon">
+                      <svg class="header-list__icon-img">
+                        <use href="#user-icon"></use>
+                      </svg>
+                    </span>
                     Вячеслав
                   </a>
                 </li>
@@ -193,391 +192,638 @@
 
             <div class="main">
                 <div class="container">
-                    <div class="balance">
+                    <form action="http://localhost:3000/" method="post" class="balance-form">
+                        <div class="balance">
                 
-                        <div class="settings block">
-                            <h6 class="settings__title block-title">ТВВ-320-2 3000 об/мин По 3-й форме 26-34 v 29-31</h6>
+                            <div class="service-elements _hidden">
+                                <input type="text" name="ZAG_" id="ZAG_" value="Балансировочный калькулятор">
+                                <input type="text" name="C1_" id="C1_" value="ТОЧКА A/ЛЕВАЯ ПЛОСКОСТЬ">
+                                <input type="text" name="C2_" id="C2_" value="ТОЧКА B/ПРАВАЯ ПЛОСКОСТЬ">
+                            </div>
                 
-                            <div class="settings-type">
-                                <h6 class="info-title">Тип агрегата</h6>
+                            <div class="settings block">
+                                <h6 id="ZAG" class="settings__title block-title">ТВВ-320-2 3000 об/мин По 3-й форме 26-34 v 29-31</h6>
                 
-                                <input class="settings-type__radio" name="type" id="type_200" type="radio">
-                                <label for="type_200" class="settings-type__label params-title">
-                                    ТГВ-200
+                                <div class="settings-type">
+                                    <h6 class="info-title">Тип агрегата</h6>
+                
+                                    <input class="settings-type__radio" name="T-type" id="TGV-radio" type="radio" checked>
+                                    <label for="TGV-radio" class="settings-type__label params-title">
+                                        ТГВ-200
+                                    </label>
+                
+                                    <input class="settings-type__radio" name="T-type" id="TVV-radio" type="radio">
+                                    <label for="TVV-radio" class="settings-type__label params-title">
+                                        ТВВ-320-2
+                                    </label>
+                                </div>
+                
+                                <div class="settings-select">
+                                    <h6 class="info-title">Тип балансировки</h6>
+                                    <div id="custom-select_1" class="custom-select">
+                                        <button class="custom-select__btn" type="button">
+                                            <span class="custom-select__btn-text">
+                                                Выберите из списка
+                                            </span>
+                                            <svg class="custom-select__btn-icon">
+                                                <use href="#arrow-icon"></use>
+                                            </svg>
+                                        </button>
+                                        <ul class="custom-select-list">
+                                            <template>
+                                                <li class="custom-select-list__item"></li>
+                                            </template>
+                                        </ul>
+                                        <select class="custom-select__select" name="TGV200" id="TGV200">
+                                            <option class="custom-select__option" id="TGV0" value="TGV0" selected>
+                                                Выберите из списка
+                                            </option>
+                                            <option class="custom-select__option" id="TGV1" value="TGV1">
+                                                3000 об/мин По торцевым плоскостям 19-24
+                                            </option>
+                                            <option class="custom-select__option" id="TGV4" value="TGV4">
+                                                3000 об/мин На бочке ротора 20-23сс 19-24кс
+                                            </option>
+                                            <option class="custom-select__option" id="TGV7" value="TGV7">
+                                                3000 об/мин На бочке ротора 21-22сс 19-24кс
+                                            </option>
+                                            <option class="custom-select__option" id="TGV6" value="TGV6">
+                                                3000 об/мин По 3-й форме колебаний 19-24 v 21-22
+                                            </option>
+                                            <option class="custom-select__option" id="TGV2" value="TGV2">
+                                                1140 об/мин По торцевым плоскостям 19-24
+                                            </option>
+                                            <option class="custom-select__option" id="TGV3" value="TGV3">
+                                                1140 об/мин По симметричным плоскостям 19-24сс
+                                            </option>
+                                            <option class="custom-select__option" id="TGV5" value="TGV5">
+                                                1140 об/мин На бочке ротора 20-23сс
+                                            </option>
+                                            <option class="custom-select__option" id="TGV8" value="TGV8">
+                                                1140 об/мин На бочке ротора 21-22сс
+                                            </option>
+                                            <option class="custom-select__option" id="TGV9" value="TGV9">
+                                                1140 об/мин На бочке ротора 21-22сс 19-24кс
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div id="custom-select_2" class="custom-select">
+                                        <button class="custom-select__btn" type="button">
+                                            <span class="custom-select__btn-text">
+                                                Выберите из списка
+                                            </span>
+                                            <svg class="custom-select__btn-icon">
+                                                <use href="#arrow-icon"></use>
+                                            </svg>
+                                        </button>
+                                        <ul class="custom-select-list">
+                                            <template>
+                                                <li class="custom-select-list__item"></li>
+                                            </template>
+                                        </ul>
+                                        <select class="custom-select__select" name="TVV320" id="TVV320">
+                                            <option class="custom-select__option" id="TVV0" value="TVV0" selected>
+                                                Выберите из списка
+                                            </option>
+                                            <option class="custom-select__option" id="TVV1" value="TVV1">
+                                                3000 об/мин По торцевым плоскостям 26-34
+                                            </option>
+                                            <option class="custom-select__option" id="TVV2" value="TVV2">
+                                                3000 об/мин По 3-й форме 26-34 v 30
+                                            </option>
+                                            <option class="custom-select__option" id="TVV3" value="TVV3">
+                                                3000 об/мин На бочке ротора 21-22сс 19-24кс
+                                            </option>
+                                            <option class="custom-select__option" id="TVV7" value="TVV7">
+                                                3000 об/мин По 3-й форме 26-34 v 29-31
+                                            </option>
+                                            <option class="custom-select__option" id="TVV4" value="TVV4">
+                                                930 об/мин По торцевым плоскостям 26-34
+                                            </option>
+                                            <option class="custom-select__option" id="TVV5" value="TVV5">
+                                                930 об/мин По симметричным плоскостям 27-33сс
+                                            </option>
+                                            <option class="custom-select__option" id="TVV6" value="TVV6">
+                                                930 об/мин По симметричным плоскостям 28-32сс
+                                            </option>
+                                            <option class="custom-select__option" id="TVV8" value="TVV8">
+                                                930 об/мин По 3-й форме 26-34 v 29-31
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                
+                                <div class="settings-select">
+                                    <h6 class="info-title">Способ балансировки</h6>
+                                    <div id="custom-select_3" class="custom-select">
+                                        <button class="custom-select__btn" type="button">
+                                            <span class="custom-select__btn-text">
+                                                Выберите из списка
+                                            </span>
+                                            <svg class="custom-select__btn-icon">
+                                                <use href="#arrow-icon"></use>
+                                            </svg>
+                                        </button>
+                                        <ul class="custom-select-list">
+                                            <template>
+                                                <li class="custom-select-list__item"></li>
+                                            </template>
+                                        </ul>
+                                        <select class="custom-select__select" name="REGIM" id="REGIM">
+                                            <option class="custom-select__option" id="2X2" value="2X2">
+                                                Балансировка 2x2
+                                            </option>
+                                            <option class="custom-select__option" id="SXM" value="SXM">
+                                                Симметричной и косой парой
+                                            </option>
+                                            <option class="custom-select__option" id="STAT" value="STAT">
+                                                Симметричной парой
+                                            </option>
+                                            <option class="custom-select__option" id="MOM" value="MOM">
+                                                Кососимметричной парой
+                                            </option>
+                                            <option class="custom-select__option" id="1X2" value="1X2">
+                                                Балансировка 1X2 левая плоскость
+                                            </option>
+                                            <option class="custom-select__option" id="2X1" value="2X1">
+                                                Балансировка 1X2 правая плоскость
+                                            </option>
+                                            <option class="custom-select__option" id="V" value="V">
+                                                Балансировка по третьей форме
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                
+                                <div class="settings-comment">
+                                    <h6 class="info-title">Комментарий</h6>
+                                    <textarea class="settings-comment__textarea" name="TA" id="TA"
+                                        placeholder="Комментарий к балансировке"></textarea>
+                                </div>
+                            </div>
+                
+                            <div class="scheme block">
+                                <img class="scheme__img" src="./assets/images/scheme.png" alt="scheme">
+                            </div>
+                
+                            <div class="vibration block">
+                                <h6 class="vibration__title block-title">Начальная вибрация</h6>
+                
+                                <div class="info-table">
+                                    <div class="info-table__row">
+                                        <span class="info-table__cell params-title">Параметр</span>
+                                        <span class="info-table__cell params-title">Амплитуда</span>
+                                        <span class="info-table__cell params-title">Фаза</span>
+                                    </div>
+                                    <div class="info-table__row">
+                                        <div class="info-table__cell">
+                                            <span class="info-table__content _red">А0</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="aA0" id="aA0" placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="fA0" id="fA0" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row">
+                                        <div class="info-table__cell">
+                                            <span class="info-table__content _red">В0</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="aB0" id="aB0" placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="fB0" id="fB0" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row">
+                                        <div class="info-table__cell icon-cell _red-m">
+                                            <span class="info-table__content">Сим</span>
+                                            <img class="info-table__img" src="./assets/images/arrow_1.png" alt="arr-1">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="aSt" id="aSt" placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="fSt" id="fSt" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row">
+                                        <div class="info-table__cell icon-cell _red-l">
+                                            <span class="info-table__content">Кос</span>
+                                            <img class="info-table__img" src="./assets/images/arrow_2.png" alt="arr-1">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="aM" id="aM" placeholder="Амплитуда"
+                                                readonly>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="fM" id="fM" placeholder="Фаза" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="test-symmetry hidden block" id="V1">
+                                <h6 class="test-symmetry__title block-title">Пробный пуск левая плоскость (симметричная или V пара)</h6>
+                
+                                <div class="info-table">
+                                    <div class="info-table__row">
+                                        <span class="info-table__cell params-title">Параметр</span>
+                                        <span class="info-table__cell params-title">Амплитуда</span>
+                                        <span class="info-table__cell params-title">Фаза</span>
+                                    </div>
+                                    <div class="info-table__row">
+                                        <div class="info-table__cell">
+                                            <span class="info-table__content _blue">P1</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="aP1" id="aP1" placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="fP1" id="fP1" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row">
+                                        <div class="info-table__cell">
+                                            <span class="info-table__content _blue">A1</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="aA1" id="aA1" placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="fA1" id="fA1" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row">
+                                        <div class="info-table__cell icon-cell _blue">
+                                            <span class="info-table__content">B1</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="aB1" id="aB1" placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="fB1" id="fB1" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <button class="vibration-btn default-btn" type="submit" name="BUTTON" id="BUTTON">
+                                Рассчитать груза
+                            </button>
+                
+                            <div class="influence-check">
+                                <input class="influence-check__checkbox" type="checkbox" name="KF" id="KF">
+                                <label for="KF" class="influence-check__label">
+                                    Задать коэффициенты влияния
                                 </label>
-                
-                                <input class="settings-type__radio" name="type" id="type_320" type="radio" checked>
-                                <label for="type_320" class="settings-type__label params-title">
-                                    ТВВ-320-2
-                                </label>
                             </div>
                 
-                            <div class="settings-select">
-                                <h6 class="info-title">Тип балансировки</h6>
-                                <div class="custom-select">
-                                    <select>
-                                        <option value="0" disabled>Выберите из списка:</option>
-                                        <option value="1">Тип 1</option>
-                                        <option value="2">Тип 2</option>
-                                        <option value="3">Тип 3</option>
-                                        <option value="4">Тип 4</option>
-                
-                                    </select>
+                            <div class="influence block">
+                                <h6 class="influence__title block-title">Коэффициенты влияния</h6>
+                                <div class="info-table">
+                                    <div class="info-table__row">
+                                        <span class="info-table__cell params-title" id="h_P">Параметр</span>
+                                        <span class="info-table__cell params-title" id="h_A">Амплитуда</span>
+                                        <span class="info-table__cell params-title" id="h_F">Фаза</span>
+                                    </div>
+                                    <div class="info-table__row _hidden">
+                                        <div class="info-table__cell" id="hKVA1">
+                                            <span class="info-table__content">Kв-Aл</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="raKVA1">
+                                            <input class="info-table__input" type="text" name="aKVA1" id="aKVA1"
+                                                placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="rfKVA1">
+                                            <input class="info-table__input" type="text" name="fKVA1" id="fKVA1" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row _hidden">
+                                        <div class="info-table__cell" id="hKVB1">
+                                            <span class="info-table__content">Kв-Bл</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="raKVB1">
+                                            <input class="info-table__input" type="text" name="aKVB1" id="aKVB1"
+                                                placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="rfKVB1">
+                                            <input class="info-table__input" type="text" name="fKVB1" id="fKVB1" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row _hidden">
+                                        <div class="info-table__cell" id="hKVA2">
+                                            <span class="info-table__content">Kв-Aп</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="raKVA2">
+                                            <input class="info-table__input" type="text" name="aKVA2" id="aKVA2"
+                                                placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="rfKVA2">
+                                            <input class="info-table__input" type="text" name="fKVA2" id="fKVA2" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row _hidden">
+                                        <div class="info-table__cell" id="hKVB2">
+                                            <span class="info-table__content">Kв-Bп</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="raKVB2">
+                                            <input class="info-table__input" type="text" name="aKVB2" id="aKVB2"
+                                                placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="rfKVB2">
+                                            <input class="info-table__input" type="text" name="fKVB2" id="fKVB2" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row _hidden">
+                                        <div class="info-table__cell" id="hKVAS">
+                                            <span class="info-table__content">Kв-Aсим</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="raKVAS">
+                                            <input class="info-table__input" type="text" name="aKVAS" id="aKVAS"
+                                                placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="rfKVAS">
+                                            <input class="info-table__input" type="text" name="fKVAS" id="fKVAS" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row _hidden">
+                                        <div class="info-table__cell" id="hKVBS">
+                                            <span class="info-table__content">Kв-Bсим</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="raKVBS">
+                                            <input class="info-table__input" type="text" name="aKVBS" id="aKVBS"
+                                                placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="rfKVBS">
+                                            <input class="info-table__input" type="text" name="fKVBS" id="fKVBS" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row">
+                                        <div class="info-table__cell" id="hKVA3">
+                                            <span class="info-table__content">Кв-А3ф</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="raKVA3">
+                                            <input class="info-table__input" type="text" name="aKVA3" id="aKVA3"
+                                                placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="rfKVA3">
+                                            <input class="info-table__input" type="text" name="fKVA3" id="fKVA3" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row">
+                                        <div class="info-table__cell" id="hKVB3">
+                                            <span class="info-table__content">Кв-В3ф</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="raKVB3">
+                                            <input class="info-table__input" type="text" name="aKVB3" id="aKVB3"
+                                                placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="rfKVB3">
+                                            <input class="info-table__input" type="text" name="fKVB3" id="fKVB3" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row">
+                                        <div class="info-table__cell" id="hKVAM">
+                                            <span class="info-table__content">Кв-Акос</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="raKVAM">
+                                            <input class="info-table__input" type="text" name="aKVAM" id="aKVAM"
+                                                placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="rfKVAM">
+                                            <input class="info-table__input" type="text" name="fKVAM" id="fKVAM" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row">
+                                        <div class="info-table__cell" id="hKVBM">
+                                            <span class="info-table__content">Кв-Вкос</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="raKVBM">
+                                            <input class="info-table__input" type="text" name="aKVBM" id="aKVBM"
+                                                placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="rfKVBM">
+                                            <input class="info-table__input" type="text" name="fKVBM" id="fKVBM" placeholder="Фаза">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                 
-                            <div class="settings-select">
-                                <h6 class="info-title">Способ балансировки</h6>
-                                <div class="custom-select">
-                                    <select>
-                                        <option value="0" disabled>Выберите из списка:</option>
-                                        <option value="1">Тип 1</option>
-                                        <option value="2">Тип 2</option>
-                                        <option value="3">Тип 3</option>
-                                        <option value="4">Тип 4</option>
+                            <div class="test-cone hidden block" id="V2">
+                                <h6 class="test-cone__title block-title">Пробный пуск правая плоскость (кососимметричная пара)</h6>
                 
-                                    </select>
+                                <div class="info-table">
+                                    <div class="info-table__row">
+                                        <span class="info-table__cell params-title">Параметр</span>
+                                        <span class="info-table__cell params-title">Амплитуда</span>
+                                        <span class="info-table__cell params-title">Фаза</span>
+                                    </div>
+                                    <div class="info-table__row">
+                                        <div class="info-table__cell">
+                                            <span class="info-table__content _green">P2</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="aP2" id="aP2" placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="fP2" id="fP2" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row">
+                                        <div class="info-table__cell">
+                                            <span class="info-table__content _green">A2</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="aA2" id="aA2" placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="fA2" id="fA2" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row">
+                                        <div class="info-table__cell icon-cell _green">
+                                            <span class="info-table__content">B2</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="aB2" id="aB2" placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="fB2" id="fB2" placeholder="Фаза">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                 
-                            <div class="settings-comment">
-                                <h6 class="info-title">Комментарий</h6>
-                                <textarea class="settings-comment__textarea" name="comment" id="comment"
-                                    placeholder="Комментарий к балансировке"></textarea>
+                            <div class="result block">
+                                <h6 class="result__title block-title">Результаты балансировки</h6>
+                
+                                <div class="info-table">
+                                    <div class="info-table__row">
+                                        <span class="info-table__cell params-title">Параметр</span>
+                                        <span class="info-table__cell params-title">Масса</span>
+                                        <span class="info-table__cell params-title">Фаза</span>
+                                    </div>
+                                    <div class="info-table__row _hidden">
+                                        <div class="info-table__cell _blue" id="hPA">
+                                            <span class="info-table__content">PЛ</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="aPA" id="aPA" placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="rfPA">
+                                            <input class="info-table__input" type="text" name="fPA" id="fPA" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row _hidden">
+                                        <div class="info-table__cell _blue" id="hPB">
+                                            <span class="info-table__content">PП</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="raPB">
+                                            <input class="info-table__input" type="text" name="aPB" id="aPB" placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="rfPB">
+                                            <input class="info-table__input" type="text" name="fPB" id="fPB" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row _hidden">
+                                        <div class="info-table__cell icon-cell _blue" id="hPS">
+                                            <span class="info-table__content">Р3ф</span>
+                                            <img class="info-table__img" src="./assets/images/arrow_4.png" alt="arr-1">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="raPS">
+                                            <input class="info-table__input" type="text" name="aPS" id="aPS" placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="rfPS">
+                                            <input class="info-table__input" type="text" name="fPS" id="fPS" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row _hidden">
+                                        <div class="info-table__cell _blue" id="hPA">
+                                            <span class="info-table__content">PЛ</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="raPA">
+                                            <input class="info-table__input" type="text" name="aPA" id="aPA" placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="fPA" id="fPA" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row">
+                                        <div class="info-table__cell icon-cell _blue" id="hP3">
+                                            <span class="info-table__content">Р3ф</span>
+                                            <img class="info-table__img" src="./assets/images/arrow_3.png" alt="arr-1">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="raP3">
+                                            <input class="info-table__input" type="text" name="aP3" id="aP3" placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="rfP3">
+                                            <input class="info-table__input" type="text" name="fP3" id="fP3" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row">
+                                        <div class="info-table__cell icon-cell _green" id="hPM">
+                                            <span class="info-table__content">РКос</span>
+                                            <img class="info-table__img" src="./assets/images/arrow_4.png" alt="arr-1">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="raPM">
+                                            <input class="info-table__input" type="text" name="aPM" id="aPM" placeholder="Амплитуда">
+                                        </div>
+                                        <div class="info-table__cell _grey-bg" id="rfPM">
+                                            <input class="info-table__input" type="text" name="fPM" id="fPM" placeholder="Фаза">
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="info-table">
+                                    <div class="info-table__row">
+                                        <span class="info-table__cell params-title">Параметр</span>
+                                        <span class="info-table__cell params-title">Амплитуда</span>
+                                        <span class="info-table__cell params-title">Фаза</span>
+                                    </div>
+                                    <div class="info-table__row">
+                                        <div class="info-table__cell _yellow" id="hRA">
+                                            <span class="info-table__content">RA</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="aRA" id="aRA" placeholder="Амплитуда"
+                                                readonly>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="fRA" id="fRA" placeholder="Фаза"
+                                                readonly>
+                                        </div>
+                                    </div>
+                                    <div class="info-table__row">
+                                        <div class="info-table__cell _yellow" id="hRB">
+                                            <span class="info-table__content">RB</span>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="aRB" id="aRB" placeholder="Амплитуда"
+                                                readonly>
+                                        </div>
+                                        <div class="info-table__cell _grey-bg">
+                                            <input class="info-table__input" type="text" name="fRB" id="fRB" placeholder="Фаза"
+                                                readonly>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            <button class="result-btn default-btn" type="submit" name="BUTTON" id="BUTTON">Пересчитать
+                                остаточную</button>
+                
+                            <div class="graph graph-first block _no-paddings">
+                                <!-- <div class="graph-header">
+                                    <h6 class="graph__title block-title">Опора 6/26-29 плоскость</h6>
+                                    <ul class="graph-list">
+                                        <li class="graph-list__item">А0</li>
+                                        <li class="graph-list__item">Сим</li>
+                                        <li class="graph-list__item">Кос</li>
+                                        <li class="graph-list__item">Р3ф</li>
+                                        <li class="graph-list__item">РКос</li>
+                                        <li class="graph-list__item">RA</li>
+                                    </ul>
+                                </div>
+                                <div class="graph-img">
+                                    <img src="./assets/images/graph_1.png" alt="grapg" class="graph__img">
+                                </div> -->
+                                <canvas id="canvas1" class="graph-canvas"></canvas>
+                            </div>
+                
+                            <div class="graph graph-second block _no-paddings">
+                                <!-- <div class="graph-header">
+                                    <h6 class="graph__title block-title">Опора 6/26-29 плоскость</h6>
+                                    <ul class="graph-list">
+                                        <li class="graph-list__item">В0</li>
+                                        <li class="graph-list__item">Сим</li>
+                                        <li class="graph-list__item">Кос</li>
+                                        <li class="graph-list__item">Р3ф</li>
+                                        <li class="graph-list__item">РКос</li>
+                                        <li class="graph-list__item">RВ</li>
+                                    </ul>
+                                </div>
+                                <div class="graph-img">
+                                    <img src="./assets/images/graph_2.png" alt="grapg" class="graph__img">
+                                </div> -->
+                                <canvas id="canvas2" class="graph-canvas"></canvas>
+                            </div>
+                
                         </div>
-                
-                        <div class="scheme block">
-                            <img class="scheme__img" src="./assets/images/scheme.png" alt="scheme">
-                        </div>
-                
-                        <div class="vibration block">
-                            <h6 class="vibration__title block-title">Начальная вибрация</h6>
-                
-                            <div class="info-table">
-                                <div class="info-table__row">
-                                    <span class="info-table__cell params-title">Параметр</span>
-                                    <span class="info-table__cell params-title">Амплитуда</span>
-                                    <span class="info-table__cell params-title">Фаза</span>
-                                </div>
-                                <div class="info-table__row">
-                                    <div class="info-table__cell">
-                                        <span class="info-table__content _red">А0</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Амплитуда</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Фаза</span>
-                                    </div>
-                                </div>
-                                <div class="info-table__row">
-                                    <div class="info-table__cell">
-                                        <span class="info-table__content _red">В0</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Амплитуда</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Фаза</span>
-                                    </div>
-                                </div>
-                                <div class="info-table__row">
-                                    <div class="info-table__cell icon-cell _red-m">
-                                        <span class="info-table__content">Сим</span>
-                                        <img class="info-table__img" src="./assets/images/arrow_1.png" alt="arr-1">
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Амплитуда</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Фаза</span>
-                                    </div>
-                                </div>
-                                <div class="info-table__row">
-                                    <div class="info-table__cell icon-cell _red-l">
-                                        <span class="info-table__content">Кос</span>
-                                        <img class="info-table__img" src="./assets/images/arrow_2.png" alt="arr-1">
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Амплитуда</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Фаза</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="test-symmetry hidden block">
-                            <h6 class="test-symmetry__title block-title">Пробный пуск левая плоскость (симметричная или V пара)</h6>
-                
-                            <div class="info-table">
-                                <div class="info-table__row">
-                                    <span class="info-table__cell params-title">Параметр</span>
-                                    <span class="info-table__cell params-title">Амплитуда</span>
-                                    <span class="info-table__cell params-title">Фаза</span>
-                                </div>
-                                <div class="info-table__row">
-                                    <div class="info-table__cell">
-                                        <span class="info-table__content _blue">P1</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Амплитуда</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Фаза</span>
-                                    </div>
-                                </div>
-                                <div class="info-table__row">
-                                    <div class="info-table__cell">
-                                        <span class="info-table__content _blue">A1</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Амплитуда</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Фаза</span>
-                                    </div>
-                                </div>
-                                <div class="info-table__row">
-                                    <div class="info-table__cell icon-cell _blue">
-                                        <span class="info-table__content">B1</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Амплитуда</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Фаза</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <button class="vibration-btn default-btn">
-                            Рассчитать груза
-                        </button>
-                
-                        <div class="influence-check">
-                            <input class="influence-check__checkbox" type="checkbox" name="check" id="check">
-                            <label for="check" class="influence-check__label">
-                                Задать коэффициенты влияния
-                            </label>
-                        </div>
-                
-                        <div class="influence block">
-                            <h6 class="influence__title block-title">Коэффициенты влияния</h6>
-                            <div class="info-table">
-                                <div class="info-table__row">
-                                    <span class="info-table__cell params-title">Параметр</span>
-                                    <span class="info-table__cell params-title">Амплитуда</span>
-                                    <span class="info-table__cell params-title">Фаза</span>
-                                </div>
-                                <div class="info-table__row">
-                                    <div class="info-table__cell">
-                                        <span class="info-table__content">Кв-А3ф</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Амплитуда</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Фаза</span>
-                                    </div>
-                                </div>
-                                <div class="info-table__row">
-                                    <div class="info-table__cell">
-                                        <span class="info-table__content">Кв-В3ф</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Амплитуда</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Фаза</span>
-                                    </div>
-                                </div>
-                                <div class="info-table__row">
-                                    <div class="info-table__cell">
-                                        <span class="info-table__content">Кв-Акос</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Амплитуда</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Фаза</span>
-                                    </div>
-                                </div>
-                                <div class="info-table__row">
-                                    <div class="info-table__cell">
-                                        <span class="info-table__content">Кв-Вкос</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Амплитуда</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Фаза</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="test-cone hidden block">
-                            <h6 class="test-cone__title block-title">Пробный пуск правая плоскость (кососимметричная пара)</h6>
-                
-                            <div class="info-table">
-                                <div class="info-table__row">
-                                    <span class="info-table__cell params-title">Параметр</span>
-                                    <span class="info-table__cell params-title">Амплитуда</span>
-                                    <span class="info-table__cell params-title">Фаза</span>
-                                </div>
-                                <div class="info-table__row">
-                                    <div class="info-table__cell">
-                                        <span class="info-table__content _green">P1</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Амплитуда</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Фаза</span>
-                                    </div>
-                                </div>
-                                <div class="info-table__row">
-                                    <div class="info-table__cell">
-                                        <span class="info-table__content _green">A1</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Амплитуда</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Фаза</span>
-                                    </div>
-                                </div>
-                                <div class="info-table__row">
-                                    <div class="info-table__cell icon-cell _green">
-                                        <span class="info-table__content">B1</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Амплитуда</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Фаза</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="result block">
-                            <h6 class="result__title block-title">Результаты балансировки</h6>
-                
-                            <div class="info-table">
-                                <div class="info-table__row">
-                                    <span class="info-table__cell params-title">Параметр</span>
-                                    <span class="info-table__cell params-title">Масса</span>
-                                    <span class="info-table__cell params-title">Фаза</span>
-                                </div>
-                                <div class="info-table__row">
-                                    <div class="info-table__cell icon-cell _blue">
-                                        <span class="info-table__content">Р3ф</span>
-                                        <img class="info-table__img" src="./assets/images/arrow_3.png" alt="arr-1">
-                                    </div>
-                                    <div class="info-table__cell _grey-bg">
-                                        <span class="info-table__content">41.248</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Фаза</span>
-                                    </div>
-                                </div>
-                                <div class="info-table__row">
-                                    <div class="info-table__cell icon-cell _green">
-                                        <span class="info-table__content">РКос</span>
-                                        <img class="info-table__img" src="./assets/images/arrow_4.png" alt="arr-1">
-                                    </div>
-                                    <div class="info-table__cell _grey-bg">
-                                        <span class="info-table__content">28.534</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Фаза</span>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="info-table">
-                                <div class="info-table__row">
-                                    <span class="info-table__cell params-title">Параметр</span>
-                                    <span class="info-table__cell params-title">Амплитуда</span>
-                                    <span class="info-table__cell params-title">Фаза</span>
-                                </div>
-                                <div class="info-table__row">
-                                    <div class="info-table__cell _yellow">
-                                        <span class="info-table__content">RA</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Амплитуда</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Фаза</span>
-                                    </div>
-                                </div>
-                                <div class="info-table__row">
-                                    <div class="info-table__cell _yellow">
-                                        <span class="info-table__content">RB</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Амплитуда</span>
-                                    </div>
-                                    <div class="info-table__cell _grey-bg disabled">
-                                        <span class="info-table__content">Фаза</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="result-btn default-btn">Пересчитать остаточную</button>
-                
-                        <div class="graph graph-first block">
-                            <div class="graph-header">
-                                <h6 class="graph__title block-title">Опора 6/26-29 плоскость</h6>
-                                <ul class="graph-list">
-                                    <li class="graph-list__item">А0</li>
-                                    <li class="graph-list__item">Сим</li>
-                                    <li class="graph-list__item">Кос</li>
-                                    <li class="graph-list__item">Р3ф</li>
-                                    <li class="graph-list__item">РКос</li>
-                                    <li class="graph-list__item">RA</li>
-                                </ul>
-                            </div>
-                            <div class="graph-img">
-                                <img src="./assets/images/graph_1.png" alt="grapg" class="graph__img">
-                            </div>
-                        </div>
-                
-                        <div class="graph graph-second block">
-                            <div class="graph-header">
-                                <h6 class="graph__title block-title">Опора 6/26-29 плоскость</h6>
-                                <ul class="graph-list">
-                                    <li class="graph-list__item">В0</li>
-                                    <li class="graph-list__item">Сим</li>
-                                    <li class="graph-list__item">Кос</li>
-                                    <li class="graph-list__item">Р3ф</li>
-                                    <li class="graph-list__item">РКос</li>
-                                    <li class="graph-list__item">RВ</li>
-                                </ul>
-                            </div>
-                            <div class="graph-img">
-                                <img src="./assets/images/graph_2.png" alt="grapg" class="graph__img">
-                            </div>
-                        </div>
-                
-                    </div>
+                    </form>
                 </div></div>
 
         </main>
 
-        
+
 
     </div>
 
     <!-- JS -->
-    <script src="assets/js/vendor.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/teechart.js"></script>
+    <script src="assets/js/diamech.js"></script>
 </body>
 
 </html>
